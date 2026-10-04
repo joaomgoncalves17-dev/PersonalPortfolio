@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* Paleta: neutros zinc frios + um único acento verde dessaturado. */
+:root {
+  --bg: #f6f7f7;
+  --surface: #eceeed;
+  --text: #18181b;
+  --muted: #52525b;
+  --border: #d9dbdc;
+  --accent: #1f7a5a;
+  --accent-soft: #e2efe9;
+  --on-accent: #f6f7f7;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111213;
+    --surface: #1a1c1d;
+    --text: #e8e9e9;
+    --muted: #a1a1aa;
+    --border: #2b2e30;
+    --accent: #3fb68b;
+    --accent-soft: #16261f;
+    --on-accent: #0f1311;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  /* Raio único em toda a página. */
+  --radius-ui: 6px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Entradas: hero ao carregar, secções ao entrar no ecrã. Só transform e opacity. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-load {
+    animation: rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0s) both;
+  }
+
+  @supports (animation-timeline: view()) {
+    .reveal-view {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
