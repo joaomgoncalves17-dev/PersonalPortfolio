@@ -1,8 +1,8 @@
 // Dados comuns às duas línguas.
-// TODO: confirmar o email e substituir os URLs de LinkedIn e GitHub pelos reais.
 export const site = {
   name: "João Gonçalves",
   email: "joaomgoncalves17@gmail.com",
+  // TODO: substituir pelos URLs reais.
   linkedin: "https://www.linkedin.com/in/TODO",
   github: "https://github.com/TODO",
   // TODO: colocar a foto em public/joao.jpg e mudar para "/joao.jpg".
@@ -10,5 +10,11 @@ export const site = {
   cv: {
     pt: "/cv-joao-goncalves-pt.pdf",
     en: "/cv-joao-goncalves-en.pdf",
+  },
+  googleCertificate: {
+    // TODO: colocar a imagem do diploma em public/certificates/google-it-support.png e mudar para esse caminho.
+    image: undefined as string | undefined,
+    // TODO: link de verificação do Coursera ou Credly.
+    url: undefined as string | undefined,
   },
 };

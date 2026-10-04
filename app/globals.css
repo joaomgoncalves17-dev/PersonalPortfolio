@@ -1,62 +1,70 @@
 @import "tailwindcss";
 
-/* Paleta: neutros zinc frios + um único acento verde dessaturado. */
+/* Estilo "documento técnico": cinzentos frios, um acento laranja de sinalização, cantos retos. */
 :root {
-  --bg: #f6f7f7;
-  --surface: #eceeed;
-  --text: #18181b;
-  --muted: #52525b;
-  --border: #d9dbdc;
-  --accent: #1f7a5a;
-  --accent-soft: #e2efe9;
-  --on-accent: #f6f7f7;
+  --bg: #f3f4f4;
+  --panel: #e8eaea;
+  --ink: #121415;
+  --muted: #565c61;
+  --line: #d2d6d7;
+  --accent: #b9440f;
+  --on-accent: #f3f4f4;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111213;
-    --surface: #1a1c1d;
-    --text: #e8e9e9;
-    --muted: #a1a1aa;
-    --border: #2b2e30;
-    --accent: #3fb68b;
-    --accent-soft: #16261f;
-    --on-accent: #0f1311;
+    --bg: #0e1011;
+    --panel: #161a1b;
+    --ink: #e3e5e5;
+    --muted: #99a0a5;
+    --line: #262b2d;
+    --accent: #f0773a;
+    --on-accent: #0e1011;
     color-scheme: dark;
   }
 }
 
 @theme inline {
   --color-bg: var(--bg);
-  --color-surface: var(--surface);
-  --color-text: var(--text);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
-  --color-border: var(--border);
+  --color-line: var(--line);
   --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
   --color-on-accent: var(--on-accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  /* Raio único em toda a página. */
-  --radius-ui: 6px;
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+body {
+  background: var(--bg);
+  color: var(--ink);
 }
 
-/* Entradas: hero ao carregar, secções ao entrar no ecrã. Só transform e opacity. */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Entradas: topo ao carregar, blocos ao entrar no ecrã. Só transform e opacity. */
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -73,26 +81,13 @@ html {
     .reveal-view {
       animation: rise linear both;
       animation-timeline: view();
-      animation-range: entry 0% entry 60%;
+      animation-range: entry 0% entry 50%;
     }
   }
 }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-}
-
-section[id] {
-  scroll-margin-top: 5rem;
-}
-
-::selection {
-  background: var(--accent);
-  color: var(--on-accent);
-}
-
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

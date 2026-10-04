@@ -4,64 +4,110 @@ export type Locale = (typeof locales)[number];
 export const hasLocale = (value: string): value is Locale =>
   (locales as readonly string[]).includes(value);
 
+// Páginas do site. O slug é igual nas duas línguas (/pt/projects, /en/projects).
+export const pages = ["about", "skills", "projects", "education", "contact"] as const;
+export type PageKey = (typeof pages)[number];
+
+export type Status = "done" | "current" | "planned";
+
 export type SkillGroup = {
-  id: "systems" | "networking" | "operations" | "development";
+  id: "systems" | "networking" | "automation" | "operations";
   title: string;
-  items: string[];
+  summary: string;
+  items: { name: string; learning?: boolean }[];
 };
 
 export type Project = {
+  id: string;
   title: string;
-  category: string;
-  status: string;
+  status: Status;
   summary: string;
+  goal: string;
+  scope: string[];
+  deliverables: string[];
   stack: string[];
-  // Caminho em /public. Sem imagem, é mostrado um bloco reservado.
-  image?: string;
-  imageAlt: string;
 };
 
-export type EducationItem = {
-  period: string;
+export type Credential = {
+  id: string;
   title: string;
-  place: string;
+  issuer: string;
+  status: Status;
   detail: string;
-  state: "done" | "current" | "planned";
+  // Caminho em /public e URL de verificação. Vazios até existirem.
+  image?: string;
+  imageAlt?: string;
+  url?: string;
 };
 
 export type Dictionary = {
   meta: { title: string; description: string };
-  nav: {
-    about: string;
-    skills: string;
-    projects: string;
-    education: string;
-    contact: string;
+  nav: Record<PageKey, string> & {
+    home: string;
     menu: string;
     close: string;
     switchLanguage: string;
+    main: string;
   };
-  hero: {
-    availability: string;
-    role: string;
-    headline: [string, string];
-    subtext: string;
-    ctaProjects: string;
-    ctaCv: string;
-    profile: { label: string; value: string }[];
-    photoAlt: string;
-  };
-  about: { title: string; paragraphs: string[] };
-  skills: { title: string; groups: SkillGroup[] };
-  projects: { title: string; items: Project[]; imagePending: string };
-  education: { title: string; items: EducationItem[] };
-  contact: {
-    title: string;
-    body: string;
+  status: Record<Status, string>;
+  common: {
+    readMore: string;
+    allProjects: string;
+    allSkills: string;
+    allEducation: string;
+    learning: string;
+    imagePending: string;
+    verify: string;
+    downloadCv: string;
     copy: string;
     copied: string;
     copyError: string;
-    emailLabel: string;
+    goal: string;
+    scope: string;
+    deliverables: string;
+    stack: string;
+    backHome: string;
   };
-  footer: { rights: string };
+  home: {
+    availability: string;
+    headline: [string, string];
+    subtext: string;
+    ctaProjects: string;
+    ctaContact: string;
+    photoAlt: string;
+    aboutLead: string;
+    educationTitle: string;
+    projectsTitle: string;
+    skillsTitle: string;
+    contactLead: string;
+  };
+  about: {
+    title: string;
+    intro: string;
+    paragraphs: string[];
+    principlesTitle: string;
+    principles: { title: string; body: string }[];
+    facts: { label: string; value: string }[];
+  };
+  skills: { title: string; intro: string; groups: SkillGroup[] };
+  projects: { title: string; intro: string; items: Project[] };
+  education: {
+    title: string;
+    intro: string;
+    certificationsTitle: string;
+    certifications: Credential[];
+    learningTitle: string;
+    learningItems: Credential[];
+    trainingTitle: string;
+    training: Credential[];
+  };
+  contact: {
+    title: string;
+    intro: string;
+    emailLabel: string;
+    elsewhere: string;
+    availabilityTitle: string;
+    availability: { label: string; value: string }[];
+  };
+  footer: { built: string };
 };
