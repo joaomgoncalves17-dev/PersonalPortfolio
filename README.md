@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# João Gonçalves, portfolio
 
-## Getting Started
+Personal portfolio of a junior systems administrator based in Viana do Castelo, Portugal. Available in Portuguese and English.
 
-First, run the development server:
+Pages: home (summary), about, skills, projects, education and contact.
+
+## Stack
+
+- [Next.js](https://nextjs.org) (App Router, static generation)
+- Tailwind CSS v4
+- IBM Plex Sans and IBM Plex Mono via `next/font`
+- Phosphor Icons
+
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000. Visiting `/` redirects to `/pt` or `/en` based on the browser language.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | Contents |
+| --- | --- |
+| `content/pt.ts`, `content/en.ts` | All page text, projects, skills and education, one file per language |
+| `content/site.ts` | Shared data: email, social links, photo, CV and certificate files |
+| `app/[lang]/` | One folder per page |
+| `components/` | Header, footer and shared building blocks |
+| `public/` | Photo, CVs and certificate images |
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To change any text, edit the matching entry in both `content/pt.ts` and `content/en.ts`.
