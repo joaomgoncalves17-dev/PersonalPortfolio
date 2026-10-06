@@ -1,5 +1,5 @@
 // Comportamentos da página. Todo o conteúdo está no HTML; isto só trata do menu móvel,
-// do filtro de projetos, do botão de copiar o email e de guardar a língua escolhida.
+// do botão de copiar o email e de guardar a língua escolhida.
 (() => {
   "use strict";
 
@@ -95,41 +95,5 @@
         icon.innerHTML = copyIcon;
       }, 2000);
     });
-  }
-
-  /* ---------- Filtro de projetos. A escolha fica no endereço (?tag=linux) para se poder partilhar. ---------- */
-
-  const filters = document.querySelector(".filters");
-
-  if (filters) {
-    const buttons = filters.querySelectorAll(".filter");
-    const projects = document.querySelectorAll(".project");
-    const empty = document.querySelector(".filters__empty");
-    const valid = [...buttons].map((b) => b.dataset.filter);
-
-    function apply(tag, updateUrl) {
-      buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === tag)));
-      let visible = 0;
-      projects.forEach((p) => {
-        const show = tag === "all" || p.dataset.tags.split(" ").includes(tag);
-        p.hidden = !show;
-        if (show) visible++;
-      });
-      empty.hidden = visible > 0;
-      if (updateUrl) {
-        const url = new URL(location.href);
-        if (tag === "all") url.searchParams.delete("tag");
-        else url.searchParams.set("tag", tag);
-        url.hash = "";
-        history.replaceState(null, "", url);
-      }
-    }
-
-    // Sem JavaScript o filtro não funciona, por isso só aparece aqui.
-    filters.hidden = false;
-    buttons.forEach((b) => b.addEventListener("click", () => apply(b.dataset.filter, true)));
-    const fromUrl = new URLSearchParams(location.search).get("tag");
-    // Um link direto para um projeto (#id) mostra sempre todos.
-    if (!location.hash && valid.includes(fromUrl)) apply(fromUrl, false);
   }
 })();

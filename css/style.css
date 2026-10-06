@@ -1051,48 +1051,6 @@ html:not(.js) .nav__links {
 
 /* ---------- Projetos ---------- */
 
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding-top: 2.5rem;
-}
-
-.filter {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.75rem;
-  border: 1px solid var(--line);
-  padding-inline: 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition:
-    border-color 0.2s,
-    background-color 0.2s,
-    color 0.2s;
-}
-
-.filter:hover {
-  border-color: var(--ink);
-}
-
-.filter[aria-pressed="true"] {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--bg);
-}
-
-.filter__count {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  opacity: 0.7;
-}
-
-.filters__empty {
-  padding-block: 4rem;
-}
-
 .project {
   display: grid;
   gap: 2rem;

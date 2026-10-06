@@ -64,265 +64,176 @@
     <header class="page-header">
       <div class="container reveal-load">
         <h1 class="page-title">Projects</h1>
-        <p class="lead">Lab projects that reproduce the work of an infrastructure team. The planned ones will be built in this order, and each is published with its documentation.</p>
+        <p class="lead">Lab projects that reproduce the work of an infrastructure team. The planned ones will be finished before my internship starts in January 2027, and each is published with its documentation.</p>
       </div>
     </header>
-        <div class="container">
-          <div class="filters" role="group" hidden aria-label="Filter projects">
-            <button type="button" class="filter" data-filter="all" aria-pressed="true">All <span class="filter__count">10</span></button><button type="button" class="filter" data-filter="linux" aria-pressed="false">Linux <span class="filter__count">9</span></button><button type="button" class="filter" data-filter="windows" aria-pressed="false">Windows <span class="filter__count">4</span></button><button type="button" class="filter" data-filter="network" aria-pressed="false">Networking <span class="filter__count">3</span></button>
+    <div class="container">
+      <article id="hybrid-domain" class="project">
+        <div class="project__intro reveal-view">
+          <div class="meta-row">
+            <span class="label" aria-hidden="true">01</span>
+            <span class="status status--done">Completed</span>
           </div>
-          <p class="filters__empty muted" hidden>No projects in this category.</p>
-            <article id="hybrid-domain" class="project" data-tags="windows linux">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">01</span>
-                  <span class="status status--done">Completed</span>
-                </div>
-                <h2 class="project__title">Hybrid Windows and Linux domain</h2>
-                <p class="muted measure">A small-business network built from scratch, with Active Directory, Linux servers and a tested recovery plan.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">Windows Server</li><li class="tag">Active Directory</li><li class="tag">Debian</li><li class="tag">Samba</li><li class="tag">Backups</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Simulate a small company&#39;s infrastructure and be able to recover it after a failure.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>Windows Server domain controller with DNS and DHCP</li><li>Organisational units, groups and Group Policy per department</li><li>Linux server with file shares and a web server</li><li>Automated backups and a full restore test</li></ul>
+          <h2 class="project__title">Hybrid Windows and Linux domain</h2>
+          <p class="muted measure">A small-business network built from scratch, with Active Directory, Linux servers and a tested recovery plan.</p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="tag">Windows Server</li>
+            <li class="tag">Active Directory</li>
+            <li class="tag">Debian</li>
+            <li class="tag">Samba</li>
+            <li class="tag">Backups</li>
+          </ul>
         </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>Network diagram</li><li>Written recovery plan</li><li>List of applied GPOs</li></ul>
+        <div class="project__detail reveal-view">
+          <div class="goal">
+            <h3 class="label">Goal</h3>
+            <p>Simulate a small company&#x27;s infrastructure and be able to recover it after a failure.</p>
+          </div>
+          <div>
+            <h3 class="label">What it covers</h3>
+            <ul class="dash-list">
+              <li>Windows Server domain controller with DNS and DHCP</li>
+              <li>Organisational units, groups and Group Policy per department</li>
+              <li>Linux server with file shares and a web server</li>
+              <li>Automated backups and a full restore test</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="label">What gets documented</h3>
+            <ul class="dash-list">
+              <li>Network diagram</li>
+              <li>Written recovery plan</li>
+              <li>List of applied GPOs</li>
+            </ul>
+          </div>
         </div>
-              </div>
-            </article>
-            <article id="hardened-web-server" class="project" data-tags="linux">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">02</span>
-                  <span class="status status--planned">Planned</span>
-                </div>
-                <h2 class="project__title">Hardened Linux web server</h2>
-                <p class="muted measure">A Debian server exposed to the internet with only what it needs: key-only SSH, a restrictive firewall, automatic security updates and Nginx with HTTPS.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">Debian</li><li class="tag">OpenSSH</li><li class="tag">nftables</li><li class="tag">fail2ban</li><li class="tag">Nginx</li><li class="tag">Let&#39;s Encrypt</li><li class="tag">Lynis</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Put a service online with an attack surface that is small, known and documented.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>Key-only SSH, no root login and a separate admin user</li><li>nftables firewall denying everything by default, with fail2ban on SSH</li><li>Automatic security updates with unattended-upgrades</li><li>Nginx with a Let&#39;s Encrypt certificate and security headers</li><li>Lynis audit before and after, to measure the difference</li></ul>
+      </article>
+      <article id="hardened-web-server" class="project">
+        <div class="project__intro reveal-view">
+          <div class="meta-row">
+            <span class="label" aria-hidden="true">02</span>
+            <span class="status status--planned">Planned</span>
+          </div>
+          <h2 class="project__title">Hardened Linux server hosting this site</h2>
+          <p class="muted measure">This portfolio running on a Debian server I configured myself, exposed to the internet with only what it needs.</p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="tag">Debian</li>
+            <li class="tag">OpenSSH</li>
+            <li class="tag">nftables</li>
+            <li class="tag">fail2ban</li>
+            <li class="tag">Nginx</li>
+            <li class="tag">Let&#x27;s Encrypt</li>
+            <li class="tag">Lynis</li>
+          </ul>
         </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>Hardening checklist with the reason for each change</li><li>Lynis report before and after</li><li>Nginx and firewall configuration</li></ul>
+        <div class="project__detail reveal-view">
+          <div class="goal">
+            <h3 class="label">Goal</h3>
+            <p>Put a real service online with an attack surface that is small, known and documented.</p>
+          </div>
+          <div>
+            <h3 class="label">What it covers</h3>
+            <ul class="dash-list">
+              <li>Debian on a VPS, with an admin user and sudo</li>
+              <li>Key-only SSH and no root login</li>
+              <li>nftables firewall allowing only ports 22, 80 and 443, with fail2ban on SSH</li>
+              <li>Automatic security updates with unattended-upgrades</li>
+              <li>Nginx with Let&#x27;s Encrypt HTTPS and automatic renewal</li>
+              <li>Lynis audit before and after, to measure the difference</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="label">What gets documented</h3>
+            <ul class="dash-list">
+              <li>Hardening checklist with the reason for each change</li>
+              <li>Lynis report before and after</li>
+              <li>Configuration in a Git repository</li>
+            </ul>
+          </div>
         </div>
-              </div>
-            </article>
-            <article id="bash-toolkit" class="project" data-tags="linux">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">03</span>
-                  <span class="status status--planned">Planned</span>
-                </div>
-                <h2 class="project__title">Bash maintenance toolkit</h2>
-                <p class="muted measure">Tested Bash scripts for a server&#39;s daily checks, run by systemd timers and reporting by email.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">Bash</li><li class="tag">systemd</li><li class="tag">rsync</li><li class="tag">ShellCheck</li><li class="tag">Git</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Replace the manual morning checklist with scripts that run on their own and only speak up when something is wrong.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>Health report: disk, memory, load, failed services and pending updates</li><li>User creation from CSV, with a temporary password that must be changed</li><li>rsync backup of /etc and home directories, with rotation</li><li>systemd timers instead of cron, with logs in the journal</li><li>Scripts checked with ShellCheck, using set -euo pipefail and a --dry-run mode</li></ul>
+      </article>
+      <article id="bash-toolkit" class="project">
+        <div class="project__intro reveal-view">
+          <div class="meta-row">
+            <span class="label" aria-hidden="true">03</span>
+            <span class="status status--planned">Planned</span>
+          </div>
+          <h2 class="project__title">Bash maintenance toolkit</h2>
+          <p class="muted measure">Bash scripts for the daily checks and backups of the server behind this site, run by systemd timers.</p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="tag">Bash</li>
+            <li class="tag">systemd</li>
+            <li class="tag">rsync</li>
+            <li class="tag">ShellCheck</li>
+            <li class="tag">Git</li>
+          </ul>
         </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>Git repository with README</li><li>--help output in every script</li><li>Sample report</li></ul>
+        <div class="project__detail reveal-view">
+          <div class="goal">
+            <h3 class="label">Goal</h3>
+            <p>Replace manual checks with scripts that run on their own and only speak up when something is wrong.</p>
+          </div>
+          <div>
+            <h3 class="label">What it covers</h3>
+            <ul class="dash-list">
+              <li>Daily report by email: disk, memory, failed services and pending updates</li>
+              <li>rsync backup of /etc and the site, with rotation</li>
+              <li>Monthly restore test, with the time recorded</li>
+              <li>systemd timers instead of cron, with logs in the journal</li>
+              <li>Scripts checked with ShellCheck, with --help and a --dry-run mode</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="label">What gets documented</h3>
+            <ul class="dash-list">
+              <li>Git repository with README</li>
+              <li>Sample report</li>
+              <li>Restore test log</li>
+            </ul>
+          </div>
         </div>
-              </div>
-            </article>
-            <article id="linux-storage" class="project" data-tags="linux">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">04</span>
-                  <span class="status status--planned">Planned</span>
-                </div>
-                <h2 class="project__title">Storage with RAID, LVM and NFS</h2>
-                <p class="muted measure">A file server with mirrored disks and flexible volumes, including a simulated disk failure and replacement.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">Ubuntu Server</li><li class="tag">mdadm</li><li class="tag">LVM</li><li class="tag">XFS</li><li class="tag">NFS</li><li class="tag">Samba</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Practise the disk tasks that come up in production: growing a volume, replacing a failed disk and rolling back to a snapshot.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>RAID 1 with mdadm, with LVM on top</li><li>Growing volumes and filesystems without taking the server down</li><li>LVM snapshots before every change</li><li>NFS and Samba shares with per-group permissions and quotas</li><li>Simulated disk failure and RAID rebuild, with the time recorded</li></ul>
+      </article>
+      <article id="m365-entra" class="project">
+        <div class="project__intro reveal-view">
+          <div class="meta-row">
+            <span class="label" aria-hidden="true">04</span>
+            <span class="status status--planned">Planned</span>
+          </div>
+          <h2 class="project__title">Microsoft 365 and Entra ID for a small business</h2>
+          <p class="muted measure">A Microsoft 365 test tenant set up as if for a 10-person company: accounts, licences, MFA and a laptop managed by Intune.</p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="tag">Microsoft 365</li>
+            <li class="tag">Entra ID</li>
+            <li class="tag">Intune</li>
+            <li class="tag">Exchange Online</li>
+            <li class="tag">PowerShell</li>
+          </ul>
         </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>Disk and volume layout</li><li>Disk replacement procedure</li><li>Failure test log</li></ul>
+        <div class="project__detail reveal-view">
+          <div class="goal">
+            <h3 class="label">Goal</h3>
+            <p>Practise the cloud administration that appears in almost every junior sysadmin job ad, with the decisions documented.</p>
+          </div>
+          <div>
+            <h3 class="label">What it covers</h3>
+            <ul class="dash-list">
+              <li>Users and groups per department, with group-based licensing</li>
+              <li>MFA for everyone and Conditional Access for admin accounts</li>
+              <li>Windows 11 virtual machine enrolled in Intune, with compliance policies</li>
+              <li>Onboarding and offboarding procedure: create the account, block access, convert the mailbox</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="label">What gets documented</h3>
+            <ul class="dash-list">
+              <li>Step-by-step onboarding and offboarding procedure</li>
+              <li>List of policies with the reason for each</li>
+              <li>Configuration screenshots</li>
+            </ul>
+          </div>
         </div>
-              </div>
-            </article>
-            <article id="linux-network-services" class="project" data-tags="linux network">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">05</span>
-                  <span class="status status--planned">Planned</span>
-                </div>
-                <h2 class="project__title">Network services on Linux</h2>
-                <p class="muted measure">DNS, DHCP and time for a small office running on Linux, with a secondary DNS server for redundancy.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">Debian</li><li class="tag">BIND9</li><li class="tag">Kea DHCP</li><li class="tag">chrony</li><li class="tag">dig</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Understand core network services without a GUI and compare them with the same setup on Windows Server.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>BIND9 with an internal zone, primary and secondary servers with zone transfer</li><li>Kea DHCP with reservations and automatic DNS updates</li><li>chrony as the network&#39;s NTP server</li><li>Troubleshooting with dig and journalctl</li><li>Failure test: switch off the primary DNS and confirm the network still resolves</li></ul>
-        </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>Zone files and configuration</li><li>Address and reservation table</li><li>Comparison with Windows Server DNS and DHCP</li></ul>
-        </div>
-              </div>
-            </article>
-            <article id="central-logging" class="project" data-tags="linux">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">06</span>
-                  <span class="status status--planned">Planned</span>
-                </div>
-                <h2 class="project__title">Centralised logging and auditing</h2>
-                <p class="muted measure">Every server ships its logs to one place, with a defined retention and alerts for failed logins and sudo use.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">Debian</li><li class="tag">rsyslog</li><li class="tag">journald</li><li class="tag">logrotate</li><li class="tag">auditd</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Answer &quot;who did what, and when&quot; on any server without logging into each one.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>rsyslog forwarding logs over TLS to a central server</li><li>Persistent journald with size limits</li><li>Retention policy with logrotate</li><li>auditd rules for sudo and changes to /etc/passwd and /etc/sudoers</li><li>Daily report of failed SSH logins and sudo commands</li></ul>
-        </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>Architecture diagram</li><li>Retention policy</li><li>Commented auditd rules</li><li>Sample daily report</li></ul>
-        </div>
-              </div>
-            </article>
-            <article id="network-segmentation" class="project" data-tags="network">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">07</span>
-                  <span class="status status--planned">Planned</span>
-                </div>
-                <h2 class="project__title">Segmented network with VLANs and firewall</h2>
-                <p class="muted measure">Split servers, users, guests and management into VLANs, with firewall rules between them and remote access over VPN.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">Cisco IOS</li><li class="tag">Packet Tracer</li><li class="tag">OPNsense</li><li class="tag">WireGuard</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Design, configure and document a small network with basic security.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>Addressing and VLAN plan designed before configuring</li><li>Cisco switch with VLANs, trunk and access ports</li><li>OPNsense firewall with rules between networks</li><li>Remote access with WireGuard</li><li>Built in Packet Tracer first, then on virtual machines</li></ul>
-        </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>Network diagram</li><li>Addressing table</li><li>Exported configurations</li><li>Commented firewall rules</li></ul>
-        </div>
-              </div>
-            </article>
-            <article id="backup-restore" class="project" data-tags="linux windows">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">08</span>
-                  <span class="status status--planned">Planned</span>
-                </div>
-                <h2 class="project__title">3-2-1 backups with tested restores</h2>
-                <p class="muted measure">A backup strategy for Windows and Linux servers, with an off-site copy and scheduled restore tests.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">Proxmox Backup Server</li><li class="tag">restic</li><li class="tag">Windows Server Backup</li><li class="tag">Bash</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Have a backup process where restoring is proven and measured, not assumed.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>3-2-1 policy: three copies, two media, one off-site</li><li>Virtual machine and file backups</li><li>Defined encryption and retention</li><li>Monthly restore test with the time recorded</li></ul>
-        </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>Backup policy</li><li>Step-by-step restore procedure</li><li>Test log</li></ul>
-        </div>
-              </div>
-            </article>
-            <article id="monitoring" class="project" data-tags="linux windows network">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">09</span>
-                  <span class="status status--planned">Planned</span>
-                </div>
-                <h2 class="project__title">Monitoring and alerting</h2>
-                <p class="muted measure">A dashboard showing the state of servers, services and network, with alerts when something fails or a disk is filling up.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">Zabbix</li><li class="tag">SNMP</li><li class="tag">Linux</li><li class="tag">Windows Server</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Know a service is down before a user reports it.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>Agents on Windows and Linux servers</li><li>SNMP on the switch</li><li>Email alerts for disk, memory and stopped services</li><li>Overview dashboard</li></ul>
-        </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>What is monitored and why</li><li>Alert thresholds</li><li>Dashboard screenshots</li></ul>
-        </div>
-              </div>
-            </article>
-            <article id="automation" class="project" data-tags="windows linux">
-              <div class="project__intro reveal-view">
-                <div class="meta-row">
-                  <span class="label" aria-hidden="true">10</span>
-                  <span class="status status--planned">Planned</span>
-                </div>
-                <h2 class="project__title">Account and server automation</h2>
-                <p class="muted measure">Create and disable staff accounts in Active Directory from a file, and set up Linux servers the same way every time.</p>
-                <ul class="tags" aria-label="Technologies"><li class="tag">PowerShell</li><li class="tag">Active Directory</li><li class="tag">Ansible</li><li class="tag">Git</li></ul>
-              </div>
-              <div class="project__detail reveal-view">
-                <div class="goal">
-                  <h3 class="label">Goal</h3>
-                  <p>Cut repeated manual tasks and the mistakes that come with them.</p>
-                </div>
-        <div>
-          <h3 class="label">What it covers</h3>
-          <ul class="dash-list"><li>PowerShell onboarding and offboarding script driven by CSV</li><li>Log of every change the script makes</li><li>Ansible playbooks for updates, users and SSH</li><li>Code in a Git repository with usage instructions</li></ul>
-        </div>
-        <div>
-          <h3 class="label">What gets documented</h3>
-          <ul class="dash-list"><li>Repository with scripts and README</li><li>Sample input file</li><li>Run log</li></ul>
-        </div>
-              </div>
-            </article>
-        </div>
+      </article>
+    </div>
     </main>
     <footer class="site-footer">
       <div class="container footer">
