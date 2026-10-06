@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projetos | João Gonçalves</title>
+    <meta name="description" content="Projetos de laboratório que reproduzem o trabalho de uma equipa de infraestrutura. Os planeados vão ser feitos por esta ordem e cada um fica publicado com a documentação.">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f4">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1011">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:title" content="Projetos | João Gonçalves">
+    <meta property="og:description" content="Projetos de laboratório que reproduzem o trabalho de uma equipa de infraestrutura. Os planeados vão ser feitos por esta ordem e cada um fica publicado com a documentação.">
+    <meta property="og:image" content="../assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" hreflang="pt" href="projects.html">
+    <link rel="alternate" hreflang="en" href="../en/projects.html">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+    <header class="site-header">
+      <nav class="container nav" aria-label="Principal">
+        <a href="index.html" class="brand">
+          <span class="brand__name">João Gonçalves</span>
+          <span class="brand__role">sysadmin</span>
+        </a>
+        <div class="nav__links">
+          <a href="about.html" class="nav__link">Sobre</a>
+          <a href="skills.html" class="nav__link">Competências</a>
+          <a href="projects.html" class="nav__link is-active" aria-current="page">Projetos</a>
+          <a href="education.html" class="nav__link">Formação</a>
+          <a href="contact.html" class="nav__link">Contacto</a>
+          <a class="lang-switch" href="../en/projects.html" hreflang="en" lang="en" aria-label="Ver em inglês" data-lang="en">en</a>
+        </div>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+          <svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Abrir menu" hidden>
+        <div class="container mobile-menu__bar">
+          <span class="brand__name">João Gonçalves</span>
+          <button type="button" class="menu-close" aria-label="Fechar menu"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="m5 5 14 14M19 5 5 19"/></svg></button>
+        </div>
+        <div class="container mobile-menu__body">
+          <a href="index.html" class="mobile-menu__link">Início</a>
+          <a href="about.html" class="mobile-menu__link">Sobre</a>
+          <a href="skills.html" class="mobile-menu__link">Competências</a>
+          <a href="projects.html" class="mobile-menu__link is-active" aria-current="page">Projetos</a>
+          <a href="education.html" class="mobile-menu__link">Formação</a>
+          <a href="contact.html" class="mobile-menu__link">Contacto</a>
+          <a class="mobile-menu__lang" href="../en/projects.html" hreflang="en" lang="en" data-lang="en">Ver em inglês</a>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+    <header class="page-header">
+      <div class="container reveal-load">
+        <h1 class="page-title">Projetos</h1>
+        <p class="lead">Projetos de laboratório que reproduzem o trabalho de uma equipa de infraestrutura. Os planeados vão ser feitos por esta ordem e cada um fica publicado com a documentação.</p>
+      </div>
+    </header>
+        <div class="container">
+          <div class="filters" role="group" hidden aria-label="Filtrar projetos">
+            <button type="button" class="filter" data-filter="all" aria-pressed="true">Todos <span class="filter__count">10</span></button><button type="button" class="filter" data-filter="linux" aria-pressed="false">Linux <span class="filter__count">9</span></button><button type="button" class="filter" data-filter="windows" aria-pressed="false">Windows <span class="filter__count">4</span></button><button type="button" class="filter" data-filter="network" aria-pressed="false">Redes <span class="filter__count">3</span></button>
+          </div>
+          <p class="filters__empty muted" hidden>Nenhum projeto nesta categoria.</p>
+            <article id="hybrid-domain" class="project" data-tags="windows linux">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">01</span>
+                  <span class="status status--done">Concluído</span>
+                </div>
+                <h2 class="project__title">Domínio híbrido Windows e Linux</h2>
+                <p class="muted measure">Rede de uma pequena empresa montada de raiz, com Active Directory, servidores Linux e um plano de recuperação testado.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">Windows Server</li><li class="tag">Active Directory</li><li class="tag">Debian</li><li class="tag">Samba</li><li class="tag">Backups</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Simular a infraestrutura de uma pequena empresa e conseguir recuperá-la depois de uma falha.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>Controlador de domínio Windows Server com DNS e DHCP</li><li>Unidades organizacionais, grupos e políticas de grupo por departamento</li><li>Servidor Linux com partilhas de ficheiros e servidor web</li><li>Cópias de segurança automáticas e teste de restauro completo</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Diagrama da rede</li><li>Plano de recuperação escrito</li><li>Lista de GPO aplicadas</li></ul>
+        </div>
+              </div>
+            </article>
+            <article id="hardened-web-server" class="project" data-tags="linux">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">02</span>
+                  <span class="status status--planned">Planeado</span>
+                </div>
+                <h2 class="project__title">Servidor web Linux com hardening</h2>
+                <p class="muted measure">Um servidor Debian exposto à internet só com o necessário: SSH apenas com chaves, firewall restritiva, atualizações de segurança automáticas e Nginx com HTTPS.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">Debian</li><li class="tag">OpenSSH</li><li class="tag">nftables</li><li class="tag">fail2ban</li><li class="tag">Nginx</li><li class="tag">Let&#39;s Encrypt</li><li class="tag">Lynis</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Pôr um serviço online com uma superfície de ataque pequena, conhecida e documentada.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>SSH só com chaves, sem login de root e com utilizador de administração separado</li><li>Firewall nftables a negar tudo por defeito, com fail2ban no SSH</li><li>Atualizações de segurança automáticas com unattended-upgrades</li><li>Nginx com certificado Let&#39;s Encrypt e cabeçalhos de segurança</li><li>Auditoria com Lynis antes e depois, para medir a diferença</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Checklist de hardening com o motivo de cada alteração</li><li>Relatório Lynis antes e depois</li><li>Configurações do Nginx e da firewall</li></ul>
+        </div>
+              </div>
+            </article>
+            <article id="bash-toolkit" class="project" data-tags="linux">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">03</span>
+                  <span class="status status--planned">Planeado</span>
+                </div>
+                <h2 class="project__title">Kit de manutenção em Bash</h2>
+                <p class="muted measure">Scripts Bash testados para as verificações diárias de um servidor, corridos por timers do systemd e com relatório por email.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">Bash</li><li class="tag">systemd</li><li class="tag">rsync</li><li class="tag">ShellCheck</li><li class="tag">Git</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Trocar a lista de verificação manual da manhã por scripts que correm sozinhos e só avisam quando algo está mal.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>Relatório de estado: disco, memória, carga, serviços falhados e atualizações pendentes</li><li>Criação de utilizadores a partir de CSV, com palavra-passe temporária e mudança obrigatória</li><li>Backup de /etc e das pastas pessoais com rsync e rotação</li><li>Timers do systemd em vez de cron, com registos no journal</li><li>Scripts validados com ShellCheck, com set -euo pipefail e modo --dry-run</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Repositório Git com README</li><li>Ajuda --help em cada script</li><li>Exemplo de relatório</li></ul>
+        </div>
+              </div>
+            </article>
+            <article id="linux-storage" class="project" data-tags="linux">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">04</span>
+                  <span class="status status--planned">Planeado</span>
+                </div>
+                <h2 class="project__title">Armazenamento com RAID, LVM e NFS</h2>
+                <p class="muted measure">Servidor de ficheiros com discos em espelho e volumes flexíveis, incluindo uma falha de disco simulada e a sua substituição.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">Ubuntu Server</li><li class="tag">mdadm</li><li class="tag">LVM</li><li class="tag">XFS</li><li class="tag">NFS</li><li class="tag">Samba</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Praticar as tarefas de disco que aparecem em produção: aumentar um volume, trocar um disco avariado e voltar a um snapshot.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>RAID 1 com mdadm e LVM por cima</li><li>Aumentar volumes e sistemas de ficheiros sem desligar o servidor</li><li>Snapshots LVM antes de cada alteração</li><li>Partilhas NFS e Samba com permissões por grupo e quotas</li><li>Falha de disco simulada e reconstrução do RAID, com o tempo registado</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Esquema dos discos e volumes</li><li>Procedimento de substituição de disco</li><li>Registo do teste de falha</li></ul>
+        </div>
+              </div>
+            </article>
+            <article id="linux-network-services" class="project" data-tags="linux network">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">05</span>
+                  <span class="status status--planned">Planeado</span>
+                </div>
+                <h2 class="project__title">Serviços de rede em Linux</h2>
+                <p class="muted measure">DNS, DHCP e hora para um pequeno escritório a correr em Linux, com um DNS secundário para redundância.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">Debian</li><li class="tag">BIND9</li><li class="tag">Kea DHCP</li><li class="tag">chrony</li><li class="tag">dig</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Perceber os serviços de rede base sem interface gráfica e comparar com a mesma montagem em Windows Server.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>BIND9 com zona interna, servidor primário e secundário com transferência de zona</li><li>Kea DHCP com reservas e atualização automática do DNS</li><li>chrony como servidor NTP da rede</li><li>Diagnóstico com dig e journalctl</li><li>Teste de falha: desligar o DNS primário e confirmar que a rede continua a resolver</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Ficheiros de zona e configurações</li><li>Tabela de endereços e reservas</li><li>Comparação com DNS e DHCP do Windows Server</li></ul>
+        </div>
+              </div>
+            </article>
+            <article id="central-logging" class="project" data-tags="linux">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">06</span>
+                  <span class="status status--planned">Planeado</span>
+                </div>
+                <h2 class="project__title">Registos centralizados e auditoria</h2>
+                <p class="muted measure">Todos os servidores enviam os registos para um só sítio, com retenção definida e alertas para logins falhados e uso de sudo.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">Debian</li><li class="tag">rsyslog</li><li class="tag">journald</li><li class="tag">logrotate</li><li class="tag">auditd</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Responder a &quot;quem fez o quê, e quando&quot; em qualquer servidor sem entrar em cada um.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>rsyslog a enviar registos por TLS para um servidor central</li><li>journald persistente com limites de tamanho</li><li>Política de retenção com logrotate</li><li>Regras auditd para sudo e alterações em /etc/passwd e /etc/sudoers</li><li>Relatório diário de logins SSH falhados e comandos sudo</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Diagrama da arquitetura</li><li>Política de retenção</li><li>Regras auditd comentadas</li><li>Exemplo de relatório diário</li></ul>
+        </div>
+              </div>
+            </article>
+            <article id="network-segmentation" class="project" data-tags="network">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">07</span>
+                  <span class="status status--planned">Planeado</span>
+                </div>
+                <h2 class="project__title">Rede segmentada com VLANs e firewall</h2>
+                <p class="muted measure">Separar servidores, utilizadores, convidados e gestão em VLANs, com regras de firewall entre elas e acesso remoto por VPN.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">Cisco IOS</li><li class="tag">Packet Tracer</li><li class="tag">OPNsense</li><li class="tag">WireGuard</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Desenhar, configurar e documentar uma rede pequena com segurança básica.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>Plano de endereçamento e VLANs desenhado antes de configurar</li><li>Switch Cisco com VLANs, trunk e portas de acesso</li><li>Firewall OPNsense com regras entre redes</li><li>Acesso remoto com WireGuard</li><li>Primeiro em Packet Tracer, depois em máquinas virtuais</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Diagrama de rede</li><li>Tabela de endereçamento</li><li>Configurações exportadas</li><li>Regras de firewall comentadas</li></ul>
+        </div>
+              </div>
+            </article>
+            <article id="backup-restore" class="project" data-tags="linux windows">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">08</span>
+                  <span class="status status--planned">Planeado</span>
+                </div>
+                <h2 class="project__title">Backups 3-2-1 com restauro testado</h2>
+                <p class="muted measure">Estratégia de cópias de segurança para servidores Windows e Linux, com uma cópia fora do local e testes de restauro agendados.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">Proxmox Backup Server</li><li class="tag">restic</li><li class="tag">Windows Server Backup</li><li class="tag">Bash</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Ter um processo de backup em que o restauro está provado e medido, não apenas assumido.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>Política 3-2-1: três cópias, dois suportes, uma fora do local</li><li>Backups de máquinas virtuais e de ficheiros</li><li>Encriptação e retenção definidas</li><li>Teste mensal de restauro com o tempo registado</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Política de backup</li><li>Procedimento de restauro passo a passo</li><li>Registo dos testes</li></ul>
+        </div>
+              </div>
+            </article>
+            <article id="monitoring" class="project" data-tags="linux windows network">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">09</span>
+                  <span class="status status--planned">Planeado</span>
+                </div>
+                <h2 class="project__title">Monitorização e alertas</h2>
+                <p class="muted measure">Painel com o estado de servidores, serviços e rede, e alertas quando algo falha ou um disco está a encher.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">Zabbix</li><li class="tag">SNMP</li><li class="tag">Linux</li><li class="tag">Windows Server</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Saber que um serviço caiu antes de um utilizador reclamar.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>Agentes em servidores Windows e Linux</li><li>SNMP no switch</li><li>Alertas por email para disco, memória e serviços parados</li><li>Painel com o estado geral</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Lista do que é monitorizado e porquê</li><li>Limites de alerta</li><li>Capturas do painel</li></ul>
+        </div>
+              </div>
+            </article>
+            <article id="automation" class="project" data-tags="windows linux">
+              <div class="project__intro reveal-view">
+                <div class="meta-row">
+                  <span class="label" aria-hidden="true">10</span>
+                  <span class="status status--planned">Planeado</span>
+                </div>
+                <h2 class="project__title">Automação de contas e servidores</h2>
+                <p class="muted measure">Criar e desativar contas de colaboradores no Active Directory a partir de um ficheiro, e preparar servidores Linux sempre da mesma forma.</p>
+                <ul class="tags" aria-label="Tecnologias"><li class="tag">PowerShell</li><li class="tag">Active Directory</li><li class="tag">Ansible</li><li class="tag">Git</li></ul>
+              </div>
+              <div class="project__detail reveal-view">
+                <div class="goal">
+                  <h3 class="label">Objetivo</h3>
+                  <p>Reduzir tarefas manuais repetidas e os erros que vêm com elas.</p>
+                </div>
+        <div>
+          <h3 class="label">O que inclui</h3>
+          <ul class="dash-list"><li>Script PowerShell de entrada e saída de colaboradores a partir de CSV</li><li>Registo de todas as alterações feitas pelo script</li><li>Playbooks Ansible para atualizações, utilizadores e SSH</li><li>Código num repositório Git com instruções de uso</li></ul>
+        </div>
+        <div>
+          <h3 class="label">O que fica documentado</h3>
+          <ul class="dash-list"><li>Repositório com scripts e README</li><li>Exemplo de ficheiro de entrada</li><li>Registo de execução</li></ul>
+        </div>
+              </div>
+            </article>
+        </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer">
+        <div>
+          <p class="footer__name">João Gonçalves</p>
+          <a class="footer__email" href="mailto:joaomgoncalves17@gmail.com">joaomgoncalves17@gmail.com</a>
+        </div>
+        <div class="footer__meta">
+          <a href="contact.html">Contacto</a>
+          <p>© 2026 João Gonçalves. Feito à mão em HTML, CSS e JavaScript.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

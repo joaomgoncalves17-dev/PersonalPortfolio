@@ -157,11 +157,6 @@ main {
   top: 0.75rem;
 }
 
-.noscript {
-  padding-block: 4rem;
-  color: var(--muted);
-}
-
 /* ---------- Tipografia e utilitários ---------- */
 
 .label {
@@ -538,6 +533,25 @@ main {
   font-family: var(--font-mono);
   font-size: 0.875rem;
   color: var(--muted);
+}
+
+/* Sem JavaScript: o menu móvel não abre, por isso os links ficam sempre visíveis. */
+html:not(.js) .menu-toggle,
+html:not(.js) .copy-email {
+  display: none;
+}
+
+html:not(.js) .nav {
+  flex-wrap: wrap;
+  height: auto;
+  min-height: var(--header-h);
+  padding-block: 0.75rem;
+}
+
+html:not(.js) .nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
 }
 
 /* ---------- Rodapé ---------- */
